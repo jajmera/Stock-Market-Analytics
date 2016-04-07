@@ -1,0 +1,57 @@
+2015-09-21 19:32:30,627 WARN org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2015-09-21 19:32:31,156 INFO org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2015-09-21 19:32:31,158 INFO org.apache.hadoop.metrics.jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+2015-09-21 19:32:31,274 WARN org.apache.hadoop.security.UserGroupInformation: PriviledgedActionException as:cloudera (auth:SIMPLE) cause:org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory file:/home/cloudera/outputpr already exists
+2015-09-21 19:32:38,295 WARN org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2015-09-21 19:32:38,869 INFO org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2015-09-21 19:32:38,881 INFO org.apache.hadoop.metrics.jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+2015-09-21 19:32:38,994 WARN org.apache.hadoop.security.UserGroupInformation: PriviledgedActionException as:cloudera (auth:SIMPLE) cause:org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory file:/home/cloudera/outputpr already exists
+2015-09-21 20:04:12,397 WARN org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2015-09-21 20:04:12,774 INFO org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2015-09-21 20:04:12,785 INFO org.apache.hadoop.metrics.jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+2015-09-21 20:04:13,495 WARN org.apache.hadoop.mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2015-09-21 20:04:13,500 WARN org.apache.hadoop.mapreduce.JobSubmitter: No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2015-09-21 20:04:13,509 INFO org.apache.hadoop.mapreduce.lib.input.FileInputFormat: Total input paths to process : 1
+2015-09-21 20:04:13,563 INFO org.apache.hadoop.mapreduce.JobSubmitter: number of splits:1
+2015-09-21 20:04:13,809 INFO org.apache.hadoop.mapreduce.JobSubmitter: Submitting tokens for job: job_local890687645_0001
+2015-09-21 20:04:14,277 INFO org.apache.hadoop.mapreduce.Job: The url to track the job: http://localhost:8080/
+2015-09-21 20:04:14,280 INFO org.apache.hadoop.mapred.LocalJobRunner: OutputCommitter set in config null
+2015-09-21 20:04:14,283 INFO org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: File Output Committer Algorithm version is 1
+2015-09-21 20:04:14,284 INFO org.apache.hadoop.mapreduce.Job: Running job: job_local890687645_0001
+2015-09-21 20:04:14,293 INFO org.apache.hadoop.mapred.LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2015-09-21 20:04:14,336 INFO org.apache.hadoop.mapred.LocalJobRunner: Waiting for map tasks
+2015-09-21 20:04:14,336 INFO org.apache.hadoop.mapred.LocalJobRunner: Starting task: attempt_local890687645_0001_m_000000_0
+2015-09-21 20:04:14,401 INFO org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: File Output Committer Algorithm version is 1
+2015-09-21 20:04:14,480 INFO org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2015-09-21 20:04:14,483 INFO org.apache.hadoop.mapred.MapTask: Processing split: file:/home/cloudera/PageRankInput.txt:0+96
+2015-09-21 20:04:14,719 INFO org.apache.hadoop.mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+2015-09-21 20:04:14,719 INFO org.apache.hadoop.mapred.MapTask: mapreduce.task.io.sort.mb: 100
+2015-09-21 20:04:14,719 INFO org.apache.hadoop.mapred.MapTask: soft limit at 83886080
+2015-09-21 20:04:14,719 INFO org.apache.hadoop.mapred.MapTask: bufstart = 0; bufvoid = 104857600
+2015-09-21 20:04:14,719 INFO org.apache.hadoop.mapred.MapTask: kvstart = 26214396; length = 6553600
+2015-09-21 20:04:14,733 INFO org.apache.hadoop.mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2015-09-21 20:04:14,742 INFO org.apache.hadoop.mapred.MapTask: Starting flush of map output
+2015-09-21 20:04:14,754 INFO org.apache.hadoop.mapred.LocalJobRunner: map task executor complete.
+2015-09-21 20:04:14,760 WARN org.apache.hadoop.mapred.LocalJobRunner: job_local890687645_0001
+java.lang.Exception: java.io.IOException: Type mismatch in key from map: expected org.apache.hadoop.io.Text, received org.apache.hadoop.io.LongWritable
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.io.IOException: Type mismatch in key from map: expected org.apache.hadoop.io.Text, received org.apache.hadoop.io.LongWritable
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.collect(MapTask.java:1072)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.write(MapTask.java:715)
+	at org.apache.hadoop.mapreduce.task.TaskInputOutputContextImpl.write(TaskInputOutputContextImpl.java:89)
+	at org.apache.hadoop.mapreduce.lib.map.WrappedMapper$Context.write(WrappedMapper.java:112)
+	at org.apache.hadoop.mapreduce.Mapper.map(Mapper.java:124)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:145)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2015-09-21 20:04:15,292 INFO org.apache.hadoop.mapreduce.Job: Job job_local890687645_0001 running in uber mode : false
+2015-09-21 20:04:15,303 INFO org.apache.hadoop.mapreduce.Job:  map 0% reduce 0%
+2015-09-21 20:04:15,307 INFO org.apache.hadoop.mapreduce.Job: Job job_local890687645_0001 failed with state FAILED due to: NA
+2015-09-21 20:04:15,328 INFO org.apache.hadoop.mapreduce.Job: Counters: 0
